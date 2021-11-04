@@ -20,9 +20,10 @@ defmodule Convert do
   def mps_to_mph(mps), do: 2.23693629 * mps
   def mps_to_kph(mps), do: 3.6 * mps
 end
-#вспомагательные функций!
+
+# вспомагательные функций!
 defmodule Combined do
   import Convert
-  #принимает метры, возвращает мили в час
+  # принимает метры, возвращает мили в час
   def height_to_mph(meters), do: Drop.fall_velocity(meters) |> mps_to_mph()
 end
